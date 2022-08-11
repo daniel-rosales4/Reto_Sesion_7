@@ -20,3 +20,6 @@ ggplot(DataDB, aes(x=Percentage, y = CountryCode, colour = IsOfficial )) +
   geom_point() +   
   xlab('Porcentaje') +
   ylab('País')
+
+ggplot(data=DataDB, aes(x=IsOfficial, y=Percentage, fill=CountryCode)) + 
+  geom_bar(stat="identity", position="dodge")
